@@ -1,13 +1,19 @@
 // Navigation code here
 header {
 	&.container {
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+
 		display: flex;
 		#flex.dir(column);
 		#flex.justify(center);
 		padding: 0 100px 3px;
 		max-width: 1000px;
 
-		background-color: @nav-bg;
+		background-color: rgba(@nav-bg, .8);
 		border-bottom: 2px solid @nav-border;
 		.media(@phone; {
 			padding: 0 0 3px;
@@ -28,9 +34,16 @@ header {
 			text-decoration: none;
 			font-size: 1.6rem;
 			font-weight: 700;
-			padding: 0.8rem 1.6rem;
+			padding: 0.5em 1em;
 
 			color: @nav-font;
+
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				color: black;
+				font-size: 1.8rem;
+				padding: 0.4em .9em;
+			}
 		}
 	}
 }
