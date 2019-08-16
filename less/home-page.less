@@ -13,6 +13,7 @@
 		}
 
 		img {
+			width: 100%;
 			border-radius: 5px;
 		}
 	}
@@ -28,6 +29,15 @@
 			border-radius: 20px;
 			height: 100%;
 		}
+		.media(@phone; {
+			img {
+				width: 100%;
+				margin: 20px 5%;
+				&:nth-child(n+2) {
+					display: none;
+				}
+			}
+		});
 	}
 
 	.visit-planets {
@@ -76,6 +86,22 @@
 				border-radius: 10px;
 			}
 		}
+
+		.media(@phone; {
+			#flex.wrap();
+			margin-top: 20px;
+			padding: 18px 20px;
+
+			.walk-text {
+				width: 100%;
+				margin-top: 20px;
+			}
+			.walk-img {
+				width: 100%;
+				margin: 0;
+				order: -1;
+			}
+		});
 	}
 }
 

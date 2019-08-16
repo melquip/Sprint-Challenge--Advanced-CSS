@@ -32,10 +32,15 @@
 	font-size: @fontSize;
 	font-weight: 700;
 	color: @textColor;
+	text-align: center;
 	background-color: @backgroundColor;
 	border-radius: 0.3em;
 	letter-spacing: 0.05em;
 	padding: 0.625em 1.2em 0.5em;
+	.media(@phone; {
+		display: block;
+		line-height: 3.3em;
+	});
 }
 
 .animate-hover-btn(@time: 0.33s, @animation: ease-in-out, @textColor: #000, @backgroundColor: @footer-background) {
