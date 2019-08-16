@@ -168,6 +168,46 @@ p {
     max-width: 500px;
   }
 }
+.btn {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background-color: #23293B;
+  border-radius: 0.3em;
+  letter-spacing: 0.05em;
+  padding: 0.625em 1.2em 0.5em;
+  transition: all 0.33s ease-in-out;
+}
+@media (max-width: 500px) {
+  .btn {
+    display: block;
+    width: 100%;
+    line-height: 3.3em;
+  }
+}
+.btn:hover {
+  color: #000;
+  background-color: #F6F6F6;
+  box-shadow: 0 1px 5px rgba(119, 119, 119, 0.5);
+}
+.col2 {
+  width: 100%;
+  max-width: calc(100% / 2);
+  flex-basis: calc(100% / 2);
+}
+@media (max-width: 500px) {
+  .col2 {
+    max-width: calc(100% / 1);
+    flex-basis: calc(100% / 1);
+  }
+}
 header.container {
   position: fixed;
   z-index: 2;
@@ -281,30 +321,6 @@ footer {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
-.home .walk .walk-text .btn {
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  background-color: #23293B;
-  border-radius: 0.3em;
-  letter-spacing: 0.05em;
-  padding: 0.625em 1.2em 0.5em;
-  transition: all 0.33s ease-in-out;
-}
-@media (max-width: 500px) {
-  .home .walk .walk-text .btn {
-    display: block;
-    line-height: 3.3em;
-  }
-}
-.home .walk .walk-text .btn:hover {
-  color: #000;
-  background-color: #F6F6F6;
-  box-shadow: 0 1px 5px rgba(119, 119, 119, 0.5);
-}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
@@ -329,4 +345,41 @@ footer {
     margin: 0;
     order: -1;
   }
+}
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+@media (max-width: 500px) {
+  .contacts {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+  .contacts .col2:last-child h2 {
+    margin-top: 30px;
+  }
+}
+.contacts label {
+  padding-top: 10px;
+}
+.contacts label,
+.contacts input,
+.contacts textarea {
+  display: block;
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 2em;
+}
+.contacts input,
+.contacts textarea {
+  padding-left: 1rem;
+}
+.contacts textarea {
+  min-width: 100%;
+  min-height: 100px;
+}
+.contacts .btn {
+  margin-top: 20px;
 }

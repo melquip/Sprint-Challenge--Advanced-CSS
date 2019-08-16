@@ -9,14 +9,9 @@
 	.justify(@justifyContent) {
 		justify-content: @justifyContent;
 	}
-	.content(@alignContent: flex-start) {
-		align-content: @alignContent;
-	}
-	.items(@alignItems: flex-start) {
-		align-items: @alignItems;
-	}
-	.grow(@grow: 1) {
-		flex-grow: @grow;
+	.col(@columns) {
+		max-width: calc(100% / @columns);
+		flex-basis: calc(100% / @columns);
 	}
 }
 
@@ -28,6 +23,10 @@
 
 .signup-btn(@fontSize: 1.6rem, @textColor: #fff, @backgroundColor: @ebony-clay) {
 	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 0;
 	display: inline-block;
 	font-size: @fontSize;
 	font-weight: 700;
@@ -39,6 +38,7 @@
 	padding: 0.625em 1.2em 0.5em;
 	.media(@phone; {
 		display: block;
+		width: 100%;
 		line-height: 3.3em;
 	});
 }

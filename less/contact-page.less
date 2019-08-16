@@ -1,0 +1,37 @@
+// Contacts Content
+.contacts {
+	display: flex;
+	#flex.wrap();
+	#flex.justify(space-between);
+
+	padding: 30px 0;
+	.media(@phone; {
+		#flex.dir(column);
+		padding: 30px 15px;
+		.col2:last-child h2 {
+			margin-top: 30px;
+		}
+	});
+
+	label {
+		padding-top: 10px;
+	}
+	label, input, textarea {
+		display: block;
+		width: 100%;
+		font-size: 1.6rem;
+		line-height: 2em;
+	}
+	input, textarea {
+		padding-left: 1rem;
+	}
+
+	textarea {
+		min-width: 100%;
+		min-height: 100px;
+	}
+
+	.btn {
+		margin-top: 20px;
+	}
+}
