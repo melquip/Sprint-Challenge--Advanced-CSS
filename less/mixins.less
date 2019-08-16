@@ -1,1 +1,27 @@
 // Mixins Here
+#flex() {
+	.dir(@direction: row) {
+		flex-direction: @direction;
+	}
+	.wrap(@wrap: wrap) {
+		flex-wrap: @wrap;
+	}
+	.justify(@justifyContent) {
+		justify-content: @justifyContent;
+	}
+	.content(@alignContent: flex-start) {
+		align-content: @alignContent;
+	}
+	.items(@alignItems: flex-start) {
+		align-items: @alignItems;
+	}
+	.grow(@grow: 1) {
+		flex-grow: @grow;
+	}
+}
+
+.media(@breakpoint, @rules) {
+	@media @breakpoint {
+		@rules();
+	}
+}

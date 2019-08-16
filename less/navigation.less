@@ -1,1 +1,32 @@
 // Navigation code here
+header {
+	&.container {
+		display: flex;
+		#flex.dir(column);
+		#flex.justify(center);
+		padding: 0 100px 3px;
+		max-width: 1000px;
+
+		background-color: @nav-bg;
+		border-bottom: 2px solid @nav-border;
+	}
+	h1 {
+		padding: 12px 0;
+		text-align: center;
+		color: @header-font-color;
+	}
+	nav {
+		display: flex;
+		#flex.justify(center);
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			font-size: 1.6rem;
+			font-weight: 700;
+			padding: 0.8rem 1.6rem;
+
+			color: @nav-font;
+		}
+	}
+}

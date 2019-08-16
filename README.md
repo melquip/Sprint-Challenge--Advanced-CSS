@@ -42,7 +42,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
-	The `rem` unit is proportional to the root element's font-size meaning that in this case `font-size: 1rem` = `font-size: 62.5%`.
+	The `rem` unit is proportional to the root element's font-size meaning that in this case `font-size: 1rem` = `font-size: 62.5%`. If I change the `font-size` on the root element, all `rem` values will update. Also, the `62.5%` value changes the default font-size of browsers `16px` to be `10px`, making it easier to calculate and write proper `rem` values in css.
 
 4. How would you describe preprocessing to someone new to CSS?
 
