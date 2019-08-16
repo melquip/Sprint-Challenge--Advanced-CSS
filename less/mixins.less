@@ -1,1 +1,53 @@
 // Mixins Here
+#flex() {
+	.dir(@direction: row) {
+		flex-direction: @direction;
+	}
+	.wrap(@wrap: wrap) {
+		flex-wrap: @wrap;
+	}
+	.justify(@justifyContent) {
+		justify-content: @justifyContent;
+	}
+	.col(@columns) {
+		max-width: calc(100% / @columns);
+		flex-basis: calc(100% / @columns);
+	}
+}
+
+.media(@breakpoint, @rules) {
+	@media @breakpoint {
+		@rules();
+	}
+}
+
+.signup-btn(@fontSize: 1.6rem, @textColor: #fff, @backgroundColor: @ebony-clay) {
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 0;
+	display: inline-block;
+	font-size: @fontSize;
+	font-weight: 700;
+	color: @textColor;
+	text-align: center;
+	background-color: @backgroundColor;
+	border-radius: 0.3em;
+	letter-spacing: 0.05em;
+	padding: 0.625em 1.2em 0.5em;
+	.media(@phone; {
+		display: block;
+		width: 100%;
+		line-height: 3.3em;
+	});
+}
+
+.animate-hover-btn(@time: 0.33s, @animation: ease-in-out, @textColor: #000, @backgroundColor: @footer-background) {
+	transition: all @time @animation;
+	&:hover {
+		color: @textColor;
+		background-color: @backgroundColor;
+		box-shadow: 0 1px 5px rgba(darken(@backgroundColor, 50%), .5);
+	}
+}
